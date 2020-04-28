@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+   
+  
+
+}
+/* para side */
+
+#lokohan, #gitla, #gbp, #hkd, #idr, #ils, #dkk, #inr, #chf, #mxn, #czk, #sgd, #thb, #hrk, #eur, #myr, #nok, #cny, #bgn, #php, #pln, #zar, #cad, #isk, #brl, #ron, #nzd, #try, #jpy, #rub, #krw, #usd, #aud, #huf, #sek{   
+
+    text-align: center;
+    color: white;
+    margin: 0;
+    text-transform: uppercase;
+
+}
+
+#gbp, #hkd, #idr, #ils, #dkk, #inr, #chf, #mxn, #czk, #sgd, #thb, #hrk, #eur, #myr, #nok, #cny, #bgn, #php, #pln, #zar, #cad, #isk, #brl, #ron, #nzd, #try, #jpy, #rub, #krw, #usd, #aud, #huf, #sek{   
+
+    text-align: center;
+    color: #ffc40d;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 16px;
+    
+
+}
+
+.card{
+
+   margin-top: 0;
+   margin-bottom: 0;
+   
+}
+
+
+#thb{
+    letter-spacing: 3px;
+}
+
+.fa-github{
+    font-size: 45px;
+    text-align: center;
+    display: block;
+    margin: 0em;
+    color: white;
+}
+
+#ako{
+   margin-top: 15x;
+   display: inline-block;
+}
+
+
+/* end ng side */
+
+
+
+.nav{
+    display: none;
+}
+
+
+body{
+    background-color: #212121;
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden auto;
+    
+   
+}
+
+
+#box{
+    background-color: #fffafa;
+}
+
+.ibabaw{
+    background-color: #009999;
+}
+
+.row:last-child {
+    margin-bottom: 0;
+    padding-top: 50px;
+}
+
+
+.left{
+    color:#f44336;
+}
+h3{
+   
+    padding-bottom: 7px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+label{
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #004d40;
+
+}
+
+
+.select-dropdown{
+    color:#009688;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 17px;
+}
+
+#currency-field{
+    
+    margin-left: 50%;
+    text-align: center;
+   
+}
+
+/* #segunda{
+    margin-left: 48%;
+    
+    color: #F44336;
+    position: absolute;
+    font-size: 15px;
+    text-transform: uppercase;
+}*/
+
+span{
+   display: inline-block;
+}
+
+#Ans1, #Ans2, #Ans3 {
+  text-align: left;
+  color: teal;
+  font-size: 18px;
+  margin-top: 1px;
+  height: 100%;
+  
+}
+
+#Ans4{
+    color: #336633;
+}
+
+.material-icons{
+    padding-right: 15px;
+    text-align: center ;
+}
+
+#btn{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;  
+    
+
+}
+
+.fa-calculator{
+    margin-right: 10px;
+}
+
+.fa-sync {
+    margin-right: 8px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+
+.dropdown-content li > a, .dropdown-content li > span {
+    color: #009688;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: bold;
+    background-color: #f9ffea;
+   
+}
+
+#currency-field{
+    color: #494949;
+    font-weight: bolder;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: 'Nunito', sans-serif;
+}
+
+#bagsakan{
+   display: inline-block;
+   
+}
+#ikalawangbagsak{
+    display: inline-block;
+   
+    
+ }
+
+ #dump1, #dump2, #dump3, #dump4, #dump5, #dump6{
+     font-size: .5px;
+     text-align: center;
+     color: #212121;
+ }
+
+ #calculate{
+     background-color: #336633;
+ }
+
+ #reset{
+    background-color: #cc3333;
+}
+
+#sym{
+    font-size: 45px;
+    position: absolute;
+    margin-left: 45%;
+    margin-top: -10px;
+   
+   
+}
+
+
+@media (max-width: 600px) {
+
+    body{
+        overflow: hidden auto;
+    }
+
+    #currency-field{
+    
+        margin-left: 0;       
+    }
+
+    /*#segunda{
+        margin-left: 0;
+       
+    } */
+
+    .container{
+        
+        width: 100%;
+        height: 100% !important;
+    }
+
+ 
+    *{
+        margin-top: 0!important;
+        padding-bottom: 0!important;
+        margin-bottom: 0;
+       
+    }
+  
+
+    .ibabaw{
+        padding-top: 25px;
+        text-align: center;
+        align-content: center;
+        text-transform: uppercase;
+
+    }
+
+    #sym{
+        font-size: calc(1rem + 1vw);
+        position: absolute;
+        margin-left: 0%;
+        margin-top: -18px;
+       
+    }
+
+    #btn{
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;  
+        
+    
+    }
+
+ 
+
+    
+    }

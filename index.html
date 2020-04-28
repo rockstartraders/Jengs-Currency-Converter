@@ -1,0 +1,1040 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="img/favicon-96x96.png">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <title>Jengs Currency Converter</title>
+    </head>
+    <body onload="onlowd();">
+
+              
+       
+         <p id="dump1"></p> <!--para sa currency code ng FROM 3 letter-->
+         <p id="dump2"></p> <!--para sa currency name ng from-->
+         <p id="dump3"></p> <!--para sa currency simbolo ng from-->
+
+         <p id="dump4"></p> <!--simbolo ng TO-->
+         <p id="dump5"></p> <!--pangalan ng pera ng TO-->
+         <p id="dump6"></p> <!--3 letter code ng pera-->
+
+
+
+
+  <!--Start ng nav-->
+
+  <ul id="slide-out" class="sidenav">
+   
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">             
+               <center>
+                   <img src="https://www.countryflags.io/us/shiny/64.png" id="palit">
+                </center> 
+                <p id="lokohan">base currency is USD</p>  
+                <br>
+                  
+
+                       <hr>
+                       <center>
+                        <img src="https://www.countryflags.io/gb/shiny/64.png">           
+                        </center> 
+                        <h6 id="gitla">British Pound Sterling</h6>
+                        <p id="gbp">GBP</p>     
+                         
+                              <hr>
+
+                        <center>
+                        <img src="https://www.countryflags.io/hk/shiny/64.png">           
+                        </center> 
+                        <h6 id="gitla">Hongkong Dollar</h6>
+                        <p id="hkd">HKD</p>      
+                      
+                        <hr>
+
+                        <center>
+                        <img src="https://www.countryflags.io/id/shiny/64.png">         
+                        </center> 
+                        <h6 id="gitla">Indonesian Rupiah</h6>
+                        <p id="idr">IDR</p>   
+
+                        <hr>
+
+                        <center>
+                            <img src="https://www.countryflags.io/il/shiny/64.png">                          
+                            </center> 
+                            <h6 id="gitla">Israeli New Shekel</h6>
+                            <p id="ils">ILS</p>   
+                            
+
+                            <hr>
+
+                        <center>
+                            <img src="https://www.countryflags.io/dk/shiny/64.png">           
+                            </center> 
+                            <h6 id="gitla">Danish Krone</h6>
+                            <p id="dkk">DKK</p>   
+                                
+                    
+                            <hr>
+
+                            <center>
+                                <img src="https://www.countryflags.io/in/shiny/64.png">
+                                </center> 
+                                <h6 id="gitla"> Indian Rupee</h6>
+                                <p id="inr">INR</p>   
+                                    
+
+
+                                <hr>
+
+                                <center>
+                                    <img src="https://www.countryflags.io/ch/shiny/64.png">
+                                    </center> 
+                                    <h6 id="gitla"> Swiss Franc</h6>
+                                    <p id="chf">CHF</p>   
+                                    
+                                    
+                                    <hr>
+
+
+                                <center>
+                                    <img src="https://www.countryflags.io/mx/shiny/64.png">        
+                                    </center> 
+                                    <h6 id="gitla">Mexican Peso</h6>
+                                    <p id="mxn">MXN</p>   
+
+
+                                    <hr>
+
+
+                                    <center>
+                                        <img src="https://www.countryflags.io/cz/shiny/64.png">                                       
+                                        </center> 
+                                        <h6 id="gitla">Czech Koruna</h6>
+                                        <p id="czk">CZK</p> 
+                                        
+                                        
+
+                                        <hr>
+
+
+                                    <center>
+                                        <img src="https://www.countryflags.io/sg/shiny/64.png">                                        
+                                        </center> 
+                                        <h6 id="gitla">Singapore Dollar</h6>
+                                        <p id="sgd">SGD</p>   
+                                                
+
+                                        <hr>
+
+                                        
+
+                                    <center>
+                                        <img src="https://www.countryflags.io/th/shiny/64.png">                                        
+                                        </center> 
+                                        <h6 id="gitla">Thai Baht</h6>
+                                        <p id="thb">THB</p>       
+                                            
+
+                                        <hr>
+
+
+                                    <center>
+                                        <img src="https://www.countryflags.io/hr/shiny/64.png">                                            
+                                        </center> 
+                                        <h6 id="gitla">Croatian Kuna</h6>
+                                        <p id="hrk">HRK</p>       
+                                                
+
+
+                                        <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/eu/shiny/64.png">                                     
+                                            </center> 
+                                            <h6 id="gitla">Euro</h6>
+                                            <p id="eur">EUR</p>       
+                                                        
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/my/shiny/64.png">                            
+                                            </center> 
+                                            <h6 id="gitla">Malaysian Ringgit</h6>
+                                            <p id="myr">MYR</p>       
+                                                   
+                                            
+                                            <hr>
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/no/shiny/64.png">                                                                
+                                            </center> 
+                                            <h6 id="gitla">Norwegian Krone</h6>
+                                            <p id="nok">NOK</p>   
+
+
+                                            <hr>
+
+
+                                            
+                                        <center>
+                                            <img src="https://www.countryflags.io/cn/shiny/64.png">
+                                            </center> 
+                                            <h6 id="gitla">Chinese Yuan</h6>
+                                            <p id="cny">CNY</p>  
+
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/bg/shiny/64.png">
+                                            </center> 
+                                            <h6 id="gitla">Bulgarian Lev </h6>
+                                            <p id="bgn">BGN</p>  
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/ph/shiny/64.png">                                            
+                                            </center> 
+                                            <h6 id="gitla">Philippine peso</h6>
+                                            <p id="php">PHP</p>  
+                                                                
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/pl/shiny/64.png">                                                                               
+                                            </center> 
+                                            <h6 id="gitla">Poland złoty</h6>
+                                            <p id="pln">PLN</p>  
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/za/shiny/64.png">                                                                                                                 
+                                            </center> 
+                                            <h6 id="gitla">South African Rand</h6>
+                                            <p id="zar">ZAR</p>  
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/ca/shiny/64.png">                                                                                                       
+                                            </center> 
+                                            <h6 id="gitla">Canadian Dollar</h6>
+                                            <p id="cad">CAD</p>  
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/is/shiny/64.png">                                                                                                  
+                                            </center> 
+                                            <h6 id="gitla">Icelandic Króna</h6>
+                                            <p id="isk">ISK</p>
+                                                        
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/br/shiny/64.png">                                                                                     
+                                            </center> 
+                                            <h6 id="gitla">Brazilian Real</h6>
+                                            <p id="brl">BRL</p>
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/ro/shiny/64.png">                                                                      
+                                            </center> 
+                                            <h6 id="gitla">Romanian Leu</h6>
+                                            <p id="ron">RON</p>
+
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/nz/shiny/64.png">                                                                 
+                                            </center> 
+                                            <h6 id="gitla">New Zealand Dollar </h6>
+                                            <p id="nzd">NZD</p>
+
+
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/tr/shiny/64.png">                                                       
+                                            </center> 
+                                            <h6 id="gitla">Turkish lira</h6>
+                                            <p id="try">TRY</p>
+
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/jp/shiny/64.png">                                                       
+                                            </center> 
+                                            <h6 id="gitla">Japanese Yen</h6>
+                                            <p id="jpy">JPY</p>
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/ru/shiny/64.png">                                                    
+                                            </center> 
+                                            <h6 id="gitla">Russian Ruble</h6>
+                                            <p id="rub">RUB</p>
+
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/kr/shiny/64.png">                                                   
+                                            </center> 
+                                            <h6 id="gitla">South Korean won</h6>
+                                            <p id="krw">KRW</p>
+
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/us/shiny/64.png">                                              
+                                            </center> 
+                                            <h6 id="gitla">United States Dollar</h6>
+                                            <p id="usd">USD</p>
+
+
+                                            <hr>
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/au/shiny/64.png">                                           
+                                            </center> 
+                                            <h6 id="gitla">Australian Dollar</h6>
+                                            <p id="aud">AUD</p>
+
+
+                                            <hr>
+
+
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/hu/shiny/64.png">                                          
+                                            </center> 
+                                            <h6 id="gitla">Hungarian Forint</h6>
+                                            <p id="huf">HUF</p>
+
+
+
+                                            <hr>
+
+                                        <center>
+                                            <img src="https://www.countryflags.io/se/shiny/64.png">                                         
+                                            </center> 
+                                            <h6 id="gitla">Swedish Krona</h6>
+                                            <p id="sek">SEK</p>
+
+                                            <hr>
+
+
+                                            <br>
+                                            <div class="card-action">
+                                               <a href="https://github.com/rockstartraders" target="_blank"><i class="fab fa-github"></i><br> </a> 
+                                                <a href="https://github.com/rockstartraders" target="_blank" id="ako">Check my other projects via GITHUB.</a>
+                                             </div>
+                                       
+
+
+
+
+
+                      </div>              
+                </div>           
+          </div>         
+
+          
+  </ul>
+  <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+        
+
+       
+         <!--End ng slide -->
+       
+        <div class="container">
+            <div class="card">
+                <div class="center white-text" id="box">
+                    <h3 class="ibabaw">Currency Calculator</h3>
+            <div class="card-content teal-text">
+                <div class="row">
+                   <form class="col s12 m6 l6 xl6">
+                        <label class="left">FROM</label>
+                        <select class="icons" id="from" onchange="una();">
+                            <option value="" disabled selected>Select Country</option>
+                            <option value="AF" data-icon="https://www.countryflags.io/af/shiny/64.png" class="left">Afghanistan</option>
+                            <option value="AX" data-icon="https://www.countryflags.io/ax/shiny/64.png" class="left">Åland Islands</option>
+                            <option value="AL" data-icon="https://www.countryflags.io/al/shiny/64.png" class="left">Albania</option>
+                            <option value="DZ" data-icon="https://www.countryflags.io/dz/shiny/64.png" class="left">Algeria</option>
+                            <option value="AS" data-icon="https://www.countryflags.io/as/shiny/64.png" class="left">American Samoa</option>
+                            <option value="AD" data-icon="https://www.countryflags.io/ad/shiny/64.png" class="left">Andorra</option>
+                            <option value="AO" data-icon="https://www.countryflags.io/ao/shiny/64.png" class="left">Angola</option>
+                            <option value="AI" data-icon="https://www.countryflags.io/ai/shiny/64.png" class="left">Anguilla</option>
+                            <option value="AQ" data-icon="https://www.countryflags.io/aq/shiny/64.png" class="left">Antarctica</option>
+                            <option value="AG" data-icon="https://www.countryflags.io/ag/shiny/64.png" class="left">Antigua and Barbuda</option>
+                            <option value="AR" data-icon="https://www.countryflags.io/ar/shiny/64.png" class="left">Argentina</option>
+                            <option value="AM" data-icon="https://www.countryflags.io/am/shiny/64.png" class="left">Armenia</option>
+                            <option value="AW" data-icon="https://www.countryflags.io/aw/shiny/64.png" class="left">Aruba</option>
+                            <option value="AU" data-icon="https://www.countryflags.io/au/shiny/64.png" class="left">Australia</option>
+                            <option value="AT" data-icon="https://www.countryflags.io/at/shiny/64.png" class="left">Austria</option>
+                            <option value="AZ" data-icon="https://www.countryflags.io/az/shiny/64.png" class="left">Azerbaijan</option>
+                            <option value="BS" data-icon="https://www.countryflags.io/bs/shiny/64.png" class="left">Bahamas</option>
+                            <option value="BH" data-icon="https://www.countryflags.io/bh/shiny/64.png" class="left">Bahrain</option>
+                            <option value="BD" data-icon="https://www.countryflags.io/bd/shiny/64.png" class="left">Bangladesh</option>
+                            <option value="BB" data-icon="https://www.countryflags.io/bb/shiny/64.png" class="left">Barbados</option>
+                            <option value="BY" data-icon="https://www.countryflags.io/by/shiny/64.png" class="left">Belarus</option>
+                            <option value="BE" data-icon="https://www.countryflags.io/be/shiny/64.png" class="left">Belgium</option>
+                            <option value="BZ" data-icon="https://www.countryflags.io/bz/shiny/64.png" class="left">Belize</option>
+                            <option value="BJ" data-icon="https://www.countryflags.io/bj/shiny/64.png" class="left">Benin</option>
+                            <option value="BM" data-icon="https://www.countryflags.io/bm/shiny/64.png" class="left">Bermuda</option>
+                            <option value="BT" data-icon="https://www.countryflags.io/bt/shiny/64.png" class="left">Bhutan</option>
+                            <option value="BO" data-icon="https://www.countryflags.io/bo/shiny/64.png" class="left">Plurinational State of Bolivia</option>
+                            <option value="BQ" data-icon="https://www.countryflags.io/bq/shiny/64.png" class="left">Sint Eustatius and Saba Bonaire</option>
+                            <option value="BA" data-icon="https://www.countryflags.io/ba/shiny/64.png" class="left">Bosnia and Herzegovina</option>
+                            <option value="BW" data-icon="https://www.countryflags.io/bw/shiny/64.png" class="left">Botswana</option>
+                            <option value="BV" data-icon="https://www.countryflags.io/bv/shiny/64.png" class="left">Bouvet Island</option>
+                            <option value="BR" data-icon="https://www.countryflags.io/br/shiny/64.png" class="left">Brazil</option>
+                            <option value="IO" data-icon="https://www.countryflags.io/io/shiny/64.png" class="left">British Indian Ocean Territory</option>
+                            <option value="BN" data-icon="https://www.countryflags.io/bn/shiny/64.png" class="left">Brunei Darussalam</option>
+                            <option value="BG" data-icon="https://www.countryflags.io/bg/shiny/64.png" class="left">Bulgaria</option>
+                            <option value="BF" data-icon="https://www.countryflags.io/bf/shiny/64.png" class="left">Burkina Faso</option>
+                            <option value="BI" data-icon="https://www.countryflags.io/bi/shiny/64.png" class="left">Burundi</option>
+                            <option value="KH" data-icon="https://www.countryflags.io/kh/shiny/64.png" class="left">Cambodia</option>
+                            <option value="CM" data-icon="https://www.countryflags.io/cm/shiny/64.png" class="left">Cameroon</option>
+                            <option value="CA" data-icon="https://www.countryflags.io/ca/shiny/64.png" class="left">Canada</option>
+                            <option value="CV" data-icon="https://www.countryflags.io/cv/shiny/64.png" class="left">Cape Verde</option>
+                            <option value="KY" data-icon="https://www.countryflags.io/ky/shiny/64.png" class="left">Cayman Islands</option>
+                            <option value="CF" data-icon="https://www.countryflags.io/cf/shiny/64.png" class="left">Central African Republic</option>
+                            <option value="TD" data-icon="https://www.countryflags.io/td/shiny/64.png" class="left">Chad</option>
+                            <option value="CL" data-icon="https://www.countryflags.io/cl/shiny/64.png" class="left">Chile</option>
+                            <option value="CN" data-icon="https://www.countryflags.io/cn/shiny/64.png" class="left">China</option>
+                            <option value="CX" data-icon="https://www.countryflags.io/cx/shiny/64.png" class="left">Christmas Island</option>
+                            <option value="CC" data-icon="https://www.countryflags.io/cc/shiny/64.png" class="left">Cocos (Keeling) Islands</option>
+                            <option value="CO" data-icon="https://www.countryflags.io/co/shiny/64.png" class="left">Colombia</option>
+                            <option value="KM" data-icon="https://www.countryflags.io/km/shiny/64.png" class="left">Comoros</option>
+                            <option value="CG" data-icon="https://www.countryflags.io/cg/shiny/64.png" class="left">Congo</option>
+                            <option value="CD" data-icon="https://www.countryflags.io/cd/shiny/64.png" class="left">Congo, the Democratic Republic of the</option>
+                            <option value="CK" data-icon="https://www.countryflags.io/ck/shiny/64.png" class="left">Cook Islands</option>
+                            <option value="CR" data-icon="https://www.countryflags.io/cr/shiny/64.png" class="left">Costa Rica</option>
+                            <option value="CI" data-icon="https://www.countryflags.io/ci/shiny/64.png" class="left">Côte d'Ivoire</option>
+                            <option value="HR" data-icon="https://www.countryflags.io/hr/shiny/64.png" class="left">Croatia</option>
+                            <option value="CU" data-icon="https://www.countryflags.io/cu/shiny/64.png" class="left">Cuba</option>
+                            <option value="CW" data-icon="https://www.countryflags.io/cw/shiny/64.png" class="left">Curaçao</option>
+                            <option value="CY" data-icon="https://www.countryflags.io/cy/shiny/64.png" class="left">Cyprus</option>
+                            <option value="CZ" data-icon="https://www.countryflags.io/cz/shiny/64.png" class="left">Czech Republic</option>
+                            <option value="DK" data-icon="https://www.countryflags.io/dk/shiny/64.png" class="left">Denmark</option>
+                            <option value="DJ" data-icon="https://www.countryflags.io/dj/shiny/64.png" class="left">Djibouti</option>
+                            <option value="DM" data-icon="https://www.countryflags.io/dm/shiny/64.png" class="left">Dominica</option>
+                            <option value="DO" data-icon="https://www.countryflags.io/do/shiny/64.png" class="left">Dominican Republic</option>
+                            <option value="EC" data-icon="https://www.countryflags.io/ec/shiny/64.png" class="left">Ecuador</option>
+                            <option value="EG" data-icon="https://www.countryflags.io/eg/shiny/64.png" class="left">Egypt</option>
+                            <option value="SV" data-icon="https://www.countryflags.io/sv/shiny/64.png" class="left">El Salvador</option>
+                            <option value="GQ" data-icon="https://www.countryflags.io/gq/shiny/64.png" class="left">Equatorial Guinea</option>
+                            <option value="ER" data-icon="https://www.countryflags.io/er/shiny/64.png" class="left">Eritrea</option>
+                            <option value="EE" data-icon="https://www.countryflags.io/ee/shiny/64.png" class="left">Estonia</option>
+                            <option value="ET" data-icon="https://www.countryflags.io/et/shiny/64.png" class="left">Ethiopia</option>
+                            <option value="FK" data-icon="https://www.countryflags.io/fk/shiny/64.png" class="left">Falkland Islands (Malvinas)</option>
+                            <option value="FO" data-icon="https://www.countryflags.io/fo/shiny/64.png" class="left">Faroe Islands</option>
+                            <option value="FJ" data-icon="https://www.countryflags.io/fj/shiny/64.png" class="left">Fiji</option>
+                            <option value="FI" data-icon="https://www.countryflags.io/fi/shiny/64.png" class="left">Finland</option>
+                            <option value="FR" data-icon="https://www.countryflags.io/fr/shiny/64.png" class="left">France</option>
+                            <option value="GF" data-icon="https://www.countryflags.io/gf/shiny/64.png" class="left">French Guiana</option>
+                            <option value="PF" data-icon="https://www.countryflags.io/pf/shiny/64.png" class="left">French Polynesia</option>
+                            <option value="TF" data-icon="https://www.countryflags.io/tf/shiny/64.png" class="left">French Southern Territories</option>
+                            <option value="GA" data-icon="https://www.countryflags.io/ga/shiny/64.png" class="left">Gabon</option>
+                            <option value="GM" data-icon="https://www.countryflags.io/gm/shiny/64.png" class="left">Gambia</option>
+                            <option value="GE" data-icon="https://www.countryflags.io/ge/shiny/64.png" class="left">Georgia</option>
+                            <option value="DE" data-icon="https://www.countryflags.io/de/shiny/64.png" class="left">Germany</option>
+                            <option value="GH" data-icon="https://www.countryflags.io/gh/shiny/64.png" class="left">Ghana</option>
+                            <option value="GI" data-icon="https://www.countryflags.io/gi/shiny/64.png" class="left">Gibraltar</option>
+                            <option value="GR" data-icon="https://www.countryflags.io/gr/shiny/64.png" class="left">Greece</option>
+                            <option value="GL" data-icon="https://www.countryflags.io/gl/shiny/64.png" class="left">Greenland</option>
+                            <option value="GD" data-icon="https://www.countryflags.io/gd/shiny/64.png" class="left">Grenada</option>
+                            <option value="GP" data-icon="https://www.countryflags.io/gp/shiny/64.png" class="left">Guadeloupe</option>
+                            <option value="GU" data-icon="https://www.countryflags.io/gu/shiny/64.png" class="left">Guam</option>
+                            <option value="GT" data-icon="https://www.countryflags.io/gt/shiny/64.png" class="left">Guatemala</option>
+                            <option value="GG" data-icon="https://www.countryflags.io/gg/shiny/64.png" class="left">Guernsey</option>
+                            <option value="GN" data-icon="https://www.countryflags.io/gn/shiny/64.png" class="left">Guinea</option>
+                            <option value="GW" data-icon="https://www.countryflags.io/gw/shiny/64.png" class="left">Guinea-Bissau</option>
+                            <option value="GY" data-icon="https://www.countryflags.io/gy/shiny/64.png" class="left">Guyana</option>
+                            <option value="HT" data-icon="https://www.countryflags.io/ht/shiny/64.png" class="left">Haiti</option>
+                            <option value="HM" data-icon="https://www.countryflags.io/hm/shiny/64.png" class="left">Heard Island and McDonald Islands</option>
+                            <option value="VA" data-icon="https://www.countryflags.io/va/shiny/64.png" class="left">Holy See (Vatican City State)</option>
+                            <option value="HN" data-icon="https://www.countryflags.io/hn/shiny/64.png" class="left">Honduras</option>
+                            <option value="HK" data-icon="https://www.countryflags.io/hk/shiny/64.png" class="left">Hong Kong</option>
+                            <option value="HU" data-icon="https://www.countryflags.io/hu/shiny/64.png" class="left">Hungary</option>
+                            <option value="IS" data-icon="https://www.countryflags.io/is/shiny/64.png" class="left">Iceland</option>
+                            <option value="IN" data-icon="https://www.countryflags.io/in/shiny/64.png" class="left">India</option>
+                            <option value="ID" data-icon="https://www.countryflags.io/id/shiny/64.png" class="left">Indonesia</option>
+                            <option value="IR" data-icon="https://www.countryflags.io/ir/shiny/64.png" class="left">Iran, Islamic Republic of</option>
+                            <option value="IQ" data-icon="https://www.countryflags.io/iq/shiny/64.png" class="left">Iraq</option>
+                            <option value="IE" data-icon="https://www.countryflags.io/ie/shiny/64.png" class="left">Ireland</option>
+                            <option value="IM" data-icon="https://www.countryflags.io/im/shiny/64.png" class="left">Isle of Man</option>
+                            <option value="IL" data-icon="https://www.countryflags.io/il/shiny/64.png" class="left">Israel</option>
+                            <option value="IT" data-icon="https://www.countryflags.io/it/shiny/64.png" class="left">Italy</option>
+                            <option value="JM" data-icon="https://www.countryflags.io/jm/shiny/64.png" class="left">Jamaica</option>
+                            <option value="JP" data-icon="https://www.countryflags.io/jp/shiny/64.png" class="left">Japan</option>
+                            <option value="JE" data-icon="https://www.countryflags.io/je/shiny/64.png" class="left">Jersey</option>
+                            <option value="JO" data-icon="https://www.countryflags.io/jo/shiny/64.png" class="left">Jordan</option>
+                            <option value="KZ" data-icon="https://www.countryflags.io/kz/shiny/64.png" class="left">Kazakhstan</option>
+                            <option value="KE" data-icon="https://www.countryflags.io/ke/shiny/64.png" class="left">Kenya</option>
+                            <option value="KI" data-icon="https://www.countryflags.io/ki/shiny/64.png" class="left">Kiribati</option>
+                            <option value="KP" data-icon="https://www.countryflags.io/kp/shiny/64.png" class="left">Democratic People's Republic of Korea</option>
+                            <option value="KR" data-icon="https://www.countryflags.io/kr/shiny/64.png" class="left">Republic of Korea</option>
+                            <option value="KW" data-icon="https://www.countryflags.io/kw/shiny/64.png" class="left">Kuwait</option>
+                            <option value="KG" data-icon="https://www.countryflags.io/kg/shiny/64.png" class="left">Kyrgyzstan</option>
+                            <option value="LA" data-icon="https://www.countryflags.io/la/shiny/64.png" class="left">Lao People's Democratic Republic</option>
+                            <option value="LV" data-icon="https://www.countryflags.io/lv/shiny/64.png" class="left">Latvia</option>
+                            <option value="LB" data-icon="https://www.countryflags.io/lb/shiny/64.png" class="left">Lebanon</option>
+                            <option value="LS" data-icon="https://www.countryflags.io/ls/shiny/64.png" class="left">Lesotho</option>
+                            <option value="LR" data-icon="https://www.countryflags.io/lr/shiny/64.png" class="left">Liberia</option>
+                            <option value="LY" data-icon="https://www.countryflags.io/ly/shiny/64.png" class="left">Libya</option>
+                            <option value="LI" data-icon="https://www.countryflags.io/li/shiny/64.png" class="left">Liechtenstein</option>
+                            <option value="LT" data-icon="https://www.countryflags.io/lt/shiny/64.png" class="left">Lithuania</option>
+                            <option value="LU" data-icon="https://www.countryflags.io/lu/shiny/64.png" class="left">Luxembourg</option>
+                            <option value="MO" data-icon="https://www.countryflags.io/mo/shiny/64.png" class="left">Macao</option>
+                            <option value="MK" data-icon="https://www.countryflags.io/mk/shiny/64.png" class="left">Macedonia, the former Yugoslav Republic of</option>
+                            <option value="MG" data-icon="https://www.countryflags.io/mg/shiny/64.png" class="left">Madagascar</option>
+                            <option value="MW" data-icon="https://www.countryflags.io/mw/shiny/64.png" class="left">Malawi</option>
+                            <option value="MY" data-icon="https://www.countryflags.io/my/shiny/64.png" class="left">Malaysia</option>
+                            <option value="MV" data-icon="https://www.countryflags.io/mv/shiny/64.png" class="left">Maldives</option>
+                            <option value="ML" data-icon="https://www.countryflags.io/ml/shiny/64.png" class="left">Mali</option>
+                            <option value="MT" data-icon="https://www.countryflags.io/mt/shiny/64.png" class="left">Malta</option>
+                            <option value="MH" data-icon="https://www.countryflags.io/mh/shiny/64.png" class="left">Marshall Islands</option>
+                            <option value="MQ" data-icon="https://www.countryflags.io/mq/shiny/64.png" class="left">Martinique</option>
+                            <option value="MR" data-icon="https://www.countryflags.io/mr/shiny/64.png" class="left">Mauritania</option>
+                            <option value="MU" data-icon="https://www.countryflags.io/mu/shiny/64.png" class="left">Mauritius</option>
+                            <option value="YT" data-icon="https://www.countryflags.io/yt/shiny/64.png" class="left">Mayotte</option>
+                            <option value="MX" data-icon="https://www.countryflags.io/mx/shiny/64.png" class="left">Mexico</option>
+                            <option value="FM" data-icon="https://www.countryflags.io/fm/shiny/64.png" class="left">Micronesia, Federated States of</option>
+                            <option value="MD" data-icon="https://www.countryflags.io/md/shiny/64.png" class="left">Moldova, Republic of</option>
+                            <option value="MC" data-icon="https://www.countryflags.io/mc/shiny/64.png" class="left">Monaco</option>
+                            <option value="MN" data-icon="https://www.countryflags.io/mn/shiny/64.png" class="left">Mongolia</option>
+                            <option value="ME" data-icon="https://www.countryflags.io/me/shiny/64.png" class="left">Montenegro</option>
+                            <option value="MS" data-icon="https://www.countryflags.io/ms/shiny/64.png" class="left">Montserrat</option>
+                            <option value="MA" data-icon="https://www.countryflags.io/ma/shiny/64.png" class="left">Morocco</option>
+                            <option value="MZ" data-icon="https://www.countryflags.io/mz/shiny/64.png" class="left">Mozambique</option>
+                            <option value="MM" data-icon="https://www.countryflags.io/mm/shiny/64.png" class="left">Myanmar</option>
+                            <option value="NA" data-icon="https://www.countryflags.io/na/shiny/64.png" class="left">Namibia</option>
+                            <option value="NR" data-icon="https://www.countryflags.io/nr/shiny/64.png" class="left">Nauru</option>
+                            <option value="NP" data-icon="https://www.countryflags.io/np/shiny/64.png" class="left">Nepal</option>
+                            <option value="NL" data-icon="https://www.countryflags.io/nl/shiny/64.png" class="left">Netherlands</option>
+                            <option value="NC" data-icon="https://www.countryflags.io/nc/shiny/64.png" class="left">New Caledonia</option>
+                            <option value="NZ" data-icon="https://www.countryflags.io/nz/shiny/64.png" class="left">New Zealand</option>
+                            <option value="NI" data-icon="https://www.countryflags.io/ni/shiny/64.png" class="left">Nicaragua</option>
+                            <option value="NE" data-icon="https://www.countryflags.io/ne/shiny/64.png" class="left">Niger</option>
+                            <option value="NG" data-icon="https://www.countryflags.io/ng/shiny/64.png" class="left">Nigeria</option>
+                            <option value="NU" data-icon="https://www.countryflags.io/nu/shiny/64.png" class="left">Niue</option>
+                            <option value="NF" data-icon="https://www.countryflags.io/nf/shiny/64.png" class="left">Norfolk Island</option>
+                            <option value="MP" data-icon="https://www.countryflags.io/mp/shiny/64.png" class="left">Northern Mariana Islands</option>
+                            <option value="NO" data-icon="https://www.countryflags.io/no/shiny/64.png" class="left">Norway</option>
+                            <option value="OM" data-icon="https://www.countryflags.io/om/shiny/64.png" class="left">Oman</option>
+                            <option value="PK" data-icon="https://www.countryflags.io/pk/shiny/64.png" class="left">Pakistan</option>
+                            <option value="PW" data-icon="https://www.countryflags.io/pw/shiny/64.png" class="left">Palau</option>
+                            <option value="PS" data-icon="https://www.countryflags.io/ps/shiny/64.png" class="left">Palestinian Territory, Occupied</option>
+                            <option value="PA" data-icon="https://www.countryflags.io/pa/shiny/64.png" class="left">Panama</option>
+                            <option value="PG" data-icon="https://www.countryflags.io/pg/shiny/64.png" class="left">Papua New Guinea</option>
+                            <option value="PY" data-icon="https://www.countryflags.io/py/shiny/64.png" class="left">Paraguay</option>
+                            <option value="PE" data-icon="https://www.countryflags.io/pe/shiny/64.png" class="left">Peru</option>
+                            <option value="PH" data-icon="https://www.countryflags.io/ph/shiny/64.png" class="left">Philippines</option>
+                            <option value="PN" data-icon="https://www.countryflags.io/pn/shiny/64.png" class="left">Pitcairn</option>
+                            <option value="PL" data-icon="https://www.countryflags.io/pl/shiny/64.png" class="left">Poland</option>
+                            <option value="PT" data-icon="https://www.countryflags.io/pt/shiny/64.png" class="left">Portugal</option>
+                            <option value="PR" data-icon="https://www.countryflags.io/pr/shiny/64.png" class="left">Puerto Rico</option>
+                            <option value="QA" data-icon="https://www.countryflags.io/qa/shiny/64.png" class="left">Qatar</option>
+                            <option value="RE" data-icon="https://www.countryflags.io/re/shiny/64.png" class="left">Réunion</option>
+                            <option value="RO" data-icon="https://www.countryflags.io/ro/shiny/64.png" class="left">Romania</option>
+                            <option value="RU" data-icon="https://www.countryflags.io/ru/shiny/64.png" class="left">Russian Federation</option>
+                            <option value="RW" data-icon="https://www.countryflags.io/rw/shiny/64.png" class="left">Rwanda</option>
+                            <option value="BL" data-icon="https://www.countryflags.io/bl/shiny/64.png" class="left">Saint Barthélemy</option>
+                            <option value="SH" data-icon="https://www.countryflags.io/sh/shiny/64.png" class="left">Saint Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KN" data-icon="https://www.countryflags.io/kn/shiny/64.png" class="left">Saint Kitts and Nevis</option>
+                            <option value="LC" data-icon="https://www.countryflags.io/lc/shiny/64.png" class="left">Saint Lucia</option>
+                            <option value="MF" data-icon="https://www.countryflags.io/mf/shiny/64.png" class="left">Saint Martin (French part)</option>
+                            <option value="PM" data-icon="https://www.countryflags.io/pm/shiny/64.png" class="left">Saint Pierre and Miquelon</option>
+                            <option value="VC" data-icon="https://www.countryflags.io/vc/shiny/64.png" class="left">Saint Vincent and the Grenadines</option>
+                            <option value="WS" data-icon="https://www.countryflags.io/ws/shiny/64.png" class="left">Samoa</option>
+                            <option value="SM" data-icon="https://www.countryflags.io/sm/shiny/64.png" class="left">San Marino</option>
+                            <option value="ST" data-icon="https://www.countryflags.io/st/shiny/64.png" class="left">Sao Tome and Principe</option>
+                            <option value="SA" data-icon="https://www.countryflags.io/sa/shiny/64.png" class="left">Saudi Arabia</option>
+                            <option value="SN" data-icon="https://www.countryflags.io/sn/shiny/64.png" class="left">Senegal</option>
+                            <option value="RS" data-icon="https://www.countryflags.io/rs/shiny/64.png" class="left">Serbia</option>
+                            <option value="SC" data-icon="https://www.countryflags.io/sc/shiny/64.png" class="left">Seychelles</option>
+                            <option value="SL" data-icon="https://www.countryflags.io/sl/shiny/64.png" class="left">Sierra Leone</option>
+                            <option value="SG" data-icon="https://www.countryflags.io/sg/shiny/64.png" class="left">Singapore</option>
+                            <option value="SX" data-icon="https://www.countryflags.io/sx/shiny/64.png" class="left">Sint Maarten (Dutch part)</option>
+                            <option value="SK" data-icon="https://www.countryflags.io/sk/shiny/64.png" class="left">Slovakia</option>
+                            <option value="SI" data-icon="https://www.countryflags.io/si/shiny/64.png" class="left">Slovenia</option>
+                            <option value="SB" data-icon="https://www.countryflags.io/sb/shiny/64.png" class="left">Solomon Islands</option>
+                            <option value="SO" data-icon="https://www.countryflags.io/so/shiny/64.png" class="left">Somalia</option>
+                            <option value="ZA" data-icon="https://www.countryflags.io/za/shiny/64.png" class="left">South Africa</option>
+                            <option value="GS" data-icon="https://www.countryflags.io/gs/shiny/64.png" class="left">South Georgia and the South Sandwich Islands</option>
+                            <option value="SS" data-icon="https://www.countryflags.io/ss/shiny/64.png" class="left">South Sudan</option>
+                            <option value="ES" data-icon="https://www.countryflags.io/es/shiny/64.png" class="left">Spain</option>
+                            <option value="LK" data-icon="https://www.countryflags.io/lk/shiny/64.png" class="left">Sri Lanka</option>
+                            <option value="SD" data-icon="https://www.countryflags.io/sd/shiny/64.png" class="left">Sudan</option>
+                            <option value="SR" data-icon="https://www.countryflags.io/sr/shiny/64.png" class="left">Suriname</option>
+                            <option value="SJ" data-icon="https://www.countryflags.io/sj/shiny/64.png" class="left">Svalbard and Jan Mayen</option>
+                            <option value="SZ" data-icon="https://www.countryflags.io/sz/shiny/64.png" class="left">Swaziland</option>
+                            <option value="SE" data-icon="https://www.countryflags.io/se/shiny/64.png" class="left">Sweden</option>
+                            <option value="CH" data-icon="https://www.countryflags.io/ch/shiny/64.png" class="left">Switzerland</option>
+                            <option value="SY" data-icon="https://www.countryflags.io/sy/shiny/64.png" class="left">Syrian Arab Republic</option>
+                            <option value="TW" data-icon="https://www.countryflags.io/tw/shiny/64.png" class="left">Taiwan, Province of China</option>
+                            <option value="TJ" data-icon="https://www.countryflags.io/tj/shiny/64.png" class="left">Tajikistan</option>
+                            <option value="TZ" data-icon="https://www.countryflags.io/tz/shiny/64.png" class="left">Tanzania, United Republic of</option>
+                            <option value="TH" data-icon="https://www.countryflags.io/th/shiny/64.png" class="left">Thailand</option>
+                            <option value="TL" data-icon="https://www.countryflags.io/tl/shiny/64.png" class="left">Timor-Leste</option>
+                            <option value="TG" data-icon="https://www.countryflags.io/tg/shiny/64.png" class="left">Togo</option>
+                            <option value="TK" data-icon="https://www.countryflags.io/tk/shiny/64.png" class="left">Tokelau</option>
+                            <option value="TO" data-icon="https://www.countryflags.io/to/shiny/64.png" class="left">Tonga</option>
+                            <option value="TT" data-icon="https://www.countryflags.io/tt/shiny/64.png" class="left">Trinidad and Tobago</option>
+                            <option value="TN" data-icon="https://www.countryflags.io/tn/shiny/64.png" class="left">Tunisia</option>
+                            <option value="TR" data-icon="https://www.countryflags.io/tr/shiny/64.png" class="left">Turkey</option>
+                            <option value="TM" data-icon="https://www.countryflags.io/tm/shiny/64.png" class="left">Turkmenistan</option>
+                            <option value="TC" data-icon="https://www.countryflags.io/tc/shiny/64.png" class="left">Turks and Caicos Islands</option>
+                            <option value="TV" data-icon="https://www.countryflags.io/tv/shiny/64.png" class="left">Tuvalu</option>
+                            <option value="UG" data-icon="https://www.countryflags.io/ug/shiny/64.png" class="left">Uganda</option>
+                            <option value="UA" data-icon="https://www.countryflags.io/ua/shiny/64.png" class="left">Ukraine</option>
+                            <option value="AE" data-icon="https://www.countryflags.io/ae/shiny/64.png" class="left">United Arab Emirates</option>
+                            <option value="GB" data-icon="https://www.countryflags.io/gb/shiny/64.png" class="left">United Kingdom</option>
+                            <option value="US" data-icon="https://www.countryflags.io/us/shiny/64.png" class="left">United States</option>
+                            <option value="UM" data-icon="https://www.countryflags.io/um/shiny/64.png" class="left">United States Minor Outlying Islands</option>
+                            <option value="UY" data-icon="https://www.countryflags.io/uy/shiny/64.png" class="left">Uruguay</option>
+                            <option value="UZ" data-icon="https://www.countryflags.io/uz/shiny/64.png" class="left">Uzbekistan</option>
+                            <option value="VU" data-icon="https://www.countryflags.io/vu/shiny/64.png" class="left">Vanuatu</option>
+                            <option value="VE" data-icon="https://www.countryflags.io/ve/shiny/64.png" class="left">Venezuela, Bolivarian Republic of</option>
+                            <option value="VN" data-icon="https://www.countryflags.io/vn/shiny/64.png" class="left">Vietnam</option>
+                            <option value="VG" data-icon="https://www.countryflags.io/vg/shiny/64.png" class="left">Virgin Islands, British</option>
+                            <option value="VI" data-icon="https://www.countryflags.io/vi/shiny/64.png" class="left">Virgin Islands, U.S.</option>
+                            <option value="WF" data-icon="https://www.countryflags.io/wf/shiny/64.png" class="left">Wallis and Futuna</option>
+                            <option value="EH" data-icon="https://www.countryflags.io/eh/shiny/64.png" class="left">Western Sahara</option>
+                            <option value="YE" data-icon="https://www.countryflags.io/ye/shiny/64.png" class="left">Yemen</option>
+                            <option value="ZM" data-icon="https://www.countryflags.io/zm/shiny/64.png" class="left">Zambia</option>
+                            <option value="ZW" data-icon="https://www.countryflags.io/zw/shiny/64.png" class="left">Zimbabwe</option>
+                        </select>
+                       </form>
+                       <form class="col s12 m6 l6 xl6">
+                        <label class="left">TO</label>
+                        <select class="icons" id="to" onchange="dalawa();">
+                            <option value="" disabled selected>Select Country</option>
+                            <option value="AF" data-icon="https://www.countryflags.io/af/shiny/64.png" class="left">Afghanistan</option>
+                            <option value="AX" data-icon="https://www.countryflags.io/ax/shiny/64.png" class="left">Åland Islands</option>
+                            <option value="AL" data-icon="https://www.countryflags.io/al/shiny/64.png" class="left">Albania</option>
+                            <option value="DZ" data-icon="https://www.countryflags.io/dz/shiny/64.png" class="left">Algeria</option>
+                            <option value="AS" data-icon="https://www.countryflags.io/as/shiny/64.png" class="left">American Samoa</option>
+                            <option value="AD" data-icon="https://www.countryflags.io/ad/shiny/64.png" class="left">Andorra</option>
+                            <option value="AO" data-icon="https://www.countryflags.io/ao/shiny/64.png" class="left">Angola</option>
+                            <option value="AI" data-icon="https://www.countryflags.io/ai/shiny/64.png" class="left">Anguilla</option>
+                            <option value="AQ" data-icon="https://www.countryflags.io/aq/shiny/64.png" class="left">Antarctica</option>
+                            <option value="AG" data-icon="https://www.countryflags.io/ag/shiny/64.png" class="left">Antigua and Barbuda</option>
+                            <option value="AR" data-icon="https://www.countryflags.io/ar/shiny/64.png" class="left">Argentina</option>
+                            <option value="AM" data-icon="https://www.countryflags.io/am/shiny/64.png" class="left">Armenia</option>
+                            <option value="AW" data-icon="https://www.countryflags.io/aw/shiny/64.png" class="left">Aruba</option>
+                            <option value="AU" data-icon="https://www.countryflags.io/au/shiny/64.png" class="left">Australia</option>
+                            <option value="AT" data-icon="https://www.countryflags.io/at/shiny/64.png" class="left">Austria</option>
+                            <option value="AZ" data-icon="https://www.countryflags.io/az/shiny/64.png" class="left">Azerbaijan</option>
+                            <option value="BS" data-icon="https://www.countryflags.io/bs/shiny/64.png" class="left">Bahamas</option>
+                            <option value="BH" data-icon="https://www.countryflags.io/bh/shiny/64.png" class="left">Bahrain</option>
+                            <option value="BD" data-icon="https://www.countryflags.io/bd/shiny/64.png" class="left">Bangladesh</option>
+                            <option value="BB" data-icon="https://www.countryflags.io/bb/shiny/64.png" class="left">Barbados</option>
+                            <option value="BY" data-icon="https://www.countryflags.io/by/shiny/64.png" class="left">Belarus</option>
+                            <option value="BE" data-icon="https://www.countryflags.io/be/shiny/64.png" class="left">Belgium</option>
+                            <option value="BZ" data-icon="https://www.countryflags.io/bz/shiny/64.png" class="left">Belize</option>
+                            <option value="BJ" data-icon="https://www.countryflags.io/bj/shiny/64.png" class="left">Benin</option>
+                            <option value="BM" data-icon="https://www.countryflags.io/bm/shiny/64.png" class="left">Bermuda</option>
+                            <option value="BT" data-icon="https://www.countryflags.io/bt/shiny/64.png" class="left">Bhutan</option>
+                            <option value="BO" data-icon="https://www.countryflags.io/bo/shiny/64.png" class="left">Plurinational State of Bolivia</option>
+                            <option value="BQ" data-icon="https://www.countryflags.io/bq/shiny/64.png" class="left">Sint Eustatius and Saba Bonaire</option>
+                            <option value="BA" data-icon="https://www.countryflags.io/ba/shiny/64.png" class="left">Bosnia and Herzegovina</option>
+                            <option value="BW" data-icon="https://www.countryflags.io/bw/shiny/64.png" class="left">Botswana</option>
+                            <option value="BV" data-icon="https://www.countryflags.io/bv/shiny/64.png" class="left">Bouvet Island</option>
+                            <option value="BR" data-icon="https://www.countryflags.io/br/shiny/64.png" class="left">Brazil</option>
+                            <option value="IO" data-icon="https://www.countryflags.io/io/shiny/64.png" class="left">British Indian Ocean Territory</option>
+                            <option value="BN" data-icon="https://www.countryflags.io/bn/shiny/64.png" class="left">Brunei Darussalam</option>
+                            <option value="BG" data-icon="https://www.countryflags.io/bg/shiny/64.png" class="left">Bulgaria</option>
+                            <option value="BF" data-icon="https://www.countryflags.io/bf/shiny/64.png" class="left">Burkina Faso</option>
+                            <option value="BI" data-icon="https://www.countryflags.io/bi/shiny/64.png" class="left">Burundi</option>
+                            <option value="KH" data-icon="https://www.countryflags.io/kh/shiny/64.png" class="left">Cambodia</option>
+                            <option value="CM" data-icon="https://www.countryflags.io/cm/shiny/64.png" class="left">Cameroon</option>
+                            <option value="CA" data-icon="https://www.countryflags.io/ca/shiny/64.png" class="left">Canada</option>
+                            <option value="CV" data-icon="https://www.countryflags.io/cv/shiny/64.png" class="left">Cape Verde</option>
+                            <option value="KY" data-icon="https://www.countryflags.io/ky/shiny/64.png" class="left">Cayman Islands</option>
+                            <option value="CF" data-icon="https://www.countryflags.io/cf/shiny/64.png" class="left">Central African Republic</option>
+                            <option value="TD" data-icon="https://www.countryflags.io/td/shiny/64.png" class="left">Chad</option>
+                            <option value="CL" data-icon="https://www.countryflags.io/cl/shiny/64.png" class="left">Chile</option>
+                            <option value="CN" data-icon="https://www.countryflags.io/cn/shiny/64.png" class="left">China</option>
+                            <option value="CX" data-icon="https://www.countryflags.io/cx/shiny/64.png" class="left">Christmas Island</option>
+                            <option value="CC" data-icon="https://www.countryflags.io/cc/shiny/64.png" class="left">Cocos (Keeling) Islands</option>
+                            <option value="CO" data-icon="https://www.countryflags.io/co/shiny/64.png" class="left">Colombia</option>
+                            <option value="KM" data-icon="https://www.countryflags.io/km/shiny/64.png" class="left">Comoros</option>
+                            <option value="CG" data-icon="https://www.countryflags.io/cg/shiny/64.png" class="left">Congo</option>
+                            <option value="CD" data-icon="https://www.countryflags.io/cd/shiny/64.png" class="left">Congo, the Democratic Republic of the</option>
+                            <option value="CK" data-icon="https://www.countryflags.io/ck/shiny/64.png" class="left">Cook Islands</option>
+                            <option value="CR" data-icon="https://www.countryflags.io/cr/shiny/64.png" class="left">Costa Rica</option>
+                            <option value="CI" data-icon="https://www.countryflags.io/ci/shiny/64.png" class="left">Côte d'Ivoire</option>
+                            <option value="HR" data-icon="https://www.countryflags.io/hr/shiny/64.png" class="left">Croatia</option>
+                            <option value="CU" data-icon="https://www.countryflags.io/cu/shiny/64.png" class="left">Cuba</option>
+                            <option value="CW" data-icon="https://www.countryflags.io/cw/shiny/64.png" class="left">Curaçao</option>
+                            <option value="CY" data-icon="https://www.countryflags.io/cy/shiny/64.png" class="left">Cyprus</option>
+                            <option value="CZ" data-icon="https://www.countryflags.io/cz/shiny/64.png" class="left">Czech Republic</option>
+                            <option value="DK" data-icon="https://www.countryflags.io/dk/shiny/64.png" class="left">Denmark</option>
+                            <option value="DJ" data-icon="https://www.countryflags.io/dj/shiny/64.png" class="left">Djibouti</option>
+                            <option value="DM" data-icon="https://www.countryflags.io/dm/shiny/64.png" class="left">Dominica</option>
+                            <option value="DO" data-icon="https://www.countryflags.io/do/shiny/64.png" class="left">Dominican Republic</option>
+                            <option value="EC" data-icon="https://www.countryflags.io/ec/shiny/64.png" class="left">Ecuador</option>
+                            <option value="EG" data-icon="https://www.countryflags.io/eg/shiny/64.png" class="left">Egypt</option>
+                            <option value="SV" data-icon="https://www.countryflags.io/sv/shiny/64.png" class="left">El Salvador</option>
+                            <option value="GQ" data-icon="https://www.countryflags.io/gq/shiny/64.png" class="left">Equatorial Guinea</option>
+                            <option value="ER" data-icon="https://www.countryflags.io/er/shiny/64.png" class="left">Eritrea</option>
+                            <option value="EE" data-icon="https://www.countryflags.io/ee/shiny/64.png" class="left">Estonia</option>
+                            <option value="ET" data-icon="https://www.countryflags.io/et/shiny/64.png" class="left">Ethiopia</option>
+                            <option value="FK" data-icon="https://www.countryflags.io/fk/shiny/64.png" class="left">Falkland Islands (Malvinas)</option>
+                            <option value="FO" data-icon="https://www.countryflags.io/fo/shiny/64.png" class="left">Faroe Islands</option>
+                            <option value="FJ" data-icon="https://www.countryflags.io/fj/shiny/64.png" class="left">Fiji</option>
+                            <option value="FI" data-icon="https://www.countryflags.io/fi/shiny/64.png" class="left">Finland</option>
+                            <option value="FR" data-icon="https://www.countryflags.io/fr/shiny/64.png" class="left">France</option>
+                            <option value="GF" data-icon="https://www.countryflags.io/gf/shiny/64.png" class="left">French Guiana</option>
+                            <option value="PF" data-icon="https://www.countryflags.io/pf/shiny/64.png" class="left">French Polynesia</option>
+                            <option value="TF" data-icon="https://www.countryflags.io/tf/shiny/64.png" class="left">French Southern Territories</option>
+                            <option value="GA" data-icon="https://www.countryflags.io/ga/shiny/64.png" class="left">Gabon</option>
+                            <option value="GM" data-icon="https://www.countryflags.io/gm/shiny/64.png" class="left">Gambia</option>
+                            <option value="GE" data-icon="https://www.countryflags.io/ge/shiny/64.png" class="left">Georgia</option>
+                            <option value="DE" data-icon="https://www.countryflags.io/de/shiny/64.png" class="left">Germany</option>
+                            <option value="GH" data-icon="https://www.countryflags.io/gh/shiny/64.png" class="left">Ghana</option>
+                            <option value="GI" data-icon="https://www.countryflags.io/gi/shiny/64.png" class="left">Gibraltar</option>
+                            <option value="GR" data-icon="https://www.countryflags.io/gr/shiny/64.png" class="left">Greece</option>
+                            <option value="GL" data-icon="https://www.countryflags.io/gl/shiny/64.png" class="left">Greenland</option>
+                            <option value="GD" data-icon="https://www.countryflags.io/gd/shiny/64.png" class="left">Grenada</option>
+                            <option value="GP" data-icon="https://www.countryflags.io/gp/shiny/64.png" class="left">Guadeloupe</option>
+                            <option value="GU" data-icon="https://www.countryflags.io/gu/shiny/64.png" class="left">Guam</option>
+                            <option value="GT" data-icon="https://www.countryflags.io/gt/shiny/64.png" class="left">Guatemala</option>
+                            <option value="GG" data-icon="https://www.countryflags.io/gg/shiny/64.png" class="left">Guernsey</option>
+                            <option value="GN" data-icon="https://www.countryflags.io/gn/shiny/64.png" class="left">Guinea</option>
+                            <option value="GW" data-icon="https://www.countryflags.io/gw/shiny/64.png" class="left">Guinea-Bissau</option>
+                            <option value="GY" data-icon="https://www.countryflags.io/gy/shiny/64.png" class="left">Guyana</option>
+                            <option value="HT" data-icon="https://www.countryflags.io/ht/shiny/64.png" class="left">Haiti</option>
+                            <option value="HM" data-icon="https://www.countryflags.io/hm/shiny/64.png" class="left">Heard Island and McDonald Islands</option>
+                            <option value="VA" data-icon="https://www.countryflags.io/va/shiny/64.png" class="left">Holy See (Vatican City State)</option>
+                            <option value="HN" data-icon="https://www.countryflags.io/hn/shiny/64.png" class="left">Honduras</option>
+                            <option value="HK" data-icon="https://www.countryflags.io/hk/shiny/64.png" class="left">Hong Kong</option>
+                            <option value="HU" data-icon="https://www.countryflags.io/hu/shiny/64.png" class="left">Hungary</option>
+                            <option value="IS" data-icon="https://www.countryflags.io/is/shiny/64.png" class="left">Iceland</option>
+                            <option value="IN" data-icon="https://www.countryflags.io/in/shiny/64.png" class="left">India</option>
+                            <option value="ID" data-icon="https://www.countryflags.io/id/shiny/64.png" class="left">Indonesia</option>
+                            <option value="IR" data-icon="https://www.countryflags.io/ir/shiny/64.png" class="left">Iran, Islamic Republic of</option>
+                            <option value="IQ" data-icon="https://www.countryflags.io/iq/shiny/64.png" class="left">Iraq</option>
+                            <option value="IE" data-icon="https://www.countryflags.io/ie/shiny/64.png" class="left">Ireland</option>
+                            <option value="IM" data-icon="https://www.countryflags.io/im/shiny/64.png" class="left">Isle of Man</option>
+                            <option value="IL" data-icon="https://www.countryflags.io/il/shiny/64.png" class="left">Israel</option>
+                            <option value="IT" data-icon="https://www.countryflags.io/it/shiny/64.png" class="left">Italy</option>
+                            <option value="JM" data-icon="https://www.countryflags.io/jm/shiny/64.png" class="left">Jamaica</option>
+                            <option value="JP" data-icon="https://www.countryflags.io/jp/shiny/64.png" class="left">Japan</option>
+                            <option value="JE" data-icon="https://www.countryflags.io/je/shiny/64.png" class="left">Jersey</option>
+                            <option value="JO" data-icon="https://www.countryflags.io/jo/shiny/64.png" class="left">Jordan</option>
+                            <option value="KZ" data-icon="https://www.countryflags.io/kz/shiny/64.png" class="left">Kazakhstan</option>
+                            <option value="KE" data-icon="https://www.countryflags.io/ke/shiny/64.png" class="left">Kenya</option>
+                            <option value="KI" data-icon="https://www.countryflags.io/ki/shiny/64.png" class="left">Kiribati</option>
+                            <option value="KP" data-icon="https://www.countryflags.io/kp/shiny/64.png" class="left">Democratic People's Republic of Korea</option>
+                            <option value="KR" data-icon="https://www.countryflags.io/kr/shiny/64.png" class="left">Republic of Korea</option>
+                            <option value="KW" data-icon="https://www.countryflags.io/kw/shiny/64.png" class="left">Kuwait</option>
+                            <option value="KG" data-icon="https://www.countryflags.io/kg/shiny/64.png" class="left">Kyrgyzstan</option>
+                            <option value="LA" data-icon="https://www.countryflags.io/la/shiny/64.png" class="left">Lao People's Democratic Republic</option>
+                            <option value="LV" data-icon="https://www.countryflags.io/lv/shiny/64.png" class="left">Latvia</option>
+                            <option value="LB" data-icon="https://www.countryflags.io/lb/shiny/64.png" class="left">Lebanon</option>
+                            <option value="LS" data-icon="https://www.countryflags.io/ls/shiny/64.png" class="left">Lesotho</option>
+                            <option value="LR" data-icon="https://www.countryflags.io/lr/shiny/64.png" class="left">Liberia</option>
+                            <option value="LY" data-icon="https://www.countryflags.io/ly/shiny/64.png" class="left">Libya</option>
+                            <option value="LI" data-icon="https://www.countryflags.io/li/shiny/64.png" class="left">Liechtenstein</option>
+                            <option value="LT" data-icon="https://www.countryflags.io/lt/shiny/64.png" class="left">Lithuania</option>
+                            <option value="LU" data-icon="https://www.countryflags.io/lu/shiny/64.png" class="left">Luxembourg</option>
+                            <option value="MO" data-icon="https://www.countryflags.io/mo/shiny/64.png" class="left">Macao</option>
+                            <option value="MK" data-icon="https://www.countryflags.io/mk/shiny/64.png" class="left">Macedonia, the former Yugoslav Republic of</option>
+                            <option value="MG" data-icon="https://www.countryflags.io/mg/shiny/64.png" class="left">Madagascar</option>
+                            <option value="MW" data-icon="https://www.countryflags.io/mw/shiny/64.png" class="left">Malawi</option>
+                            <option value="MY" data-icon="https://www.countryflags.io/my/shiny/64.png" class="left">Malaysia</option>
+                            <option value="MV" data-icon="https://www.countryflags.io/mv/shiny/64.png" class="left">Maldives</option>
+                            <option value="ML" data-icon="https://www.countryflags.io/ml/shiny/64.png" class="left">Mali</option>
+                            <option value="MT" data-icon="https://www.countryflags.io/mt/shiny/64.png" class="left">Malta</option>
+                            <option value="MH" data-icon="https://www.countryflags.io/mh/shiny/64.png" class="left">Marshall Islands</option>
+                            <option value="MQ" data-icon="https://www.countryflags.io/mq/shiny/64.png" class="left">Martinique</option>
+                            <option value="MR" data-icon="https://www.countryflags.io/mr/shiny/64.png" class="left">Mauritania</option>
+                            <option value="MU" data-icon="https://www.countryflags.io/mu/shiny/64.png" class="left">Mauritius</option>
+                            <option value="YT" data-icon="https://www.countryflags.io/yt/shiny/64.png" class="left">Mayotte</option>
+                            <option value="MX" data-icon="https://www.countryflags.io/mx/shiny/64.png" class="left">Mexico</option>
+                            <option value="FM" data-icon="https://www.countryflags.io/fm/shiny/64.png" class="left">Micronesia, Federated States of</option>
+                            <option value="MD" data-icon="https://www.countryflags.io/md/shiny/64.png" class="left">Moldova, Republic of</option>
+                            <option value="MC" data-icon="https://www.countryflags.io/mc/shiny/64.png" class="left">Monaco</option>
+                            <option value="MN" data-icon="https://www.countryflags.io/mn/shiny/64.png" class="left">Mongolia</option>
+                            <option value="ME" data-icon="https://www.countryflags.io/me/shiny/64.png" class="left">Montenegro</option>
+                            <option value="MS" data-icon="https://www.countryflags.io/ms/shiny/64.png" class="left">Montserrat</option>
+                            <option value="MA" data-icon="https://www.countryflags.io/ma/shiny/64.png" class="left">Morocco</option>
+                            <option value="MZ" data-icon="https://www.countryflags.io/mz/shiny/64.png" class="left">Mozambique</option>
+                            <option value="MM" data-icon="https://www.countryflags.io/mm/shiny/64.png" class="left">Myanmar</option>
+                            <option value="NA" data-icon="https://www.countryflags.io/na/shiny/64.png" class="left">Namibia</option>
+                            <option value="NR" data-icon="https://www.countryflags.io/nr/shiny/64.png" class="left">Nauru</option>
+                            <option value="NP" data-icon="https://www.countryflags.io/np/shiny/64.png" class="left">Nepal</option>
+                            <option value="NL" data-icon="https://www.countryflags.io/nl/shiny/64.png" class="left">Netherlands</option>
+                            <option value="NC" data-icon="https://www.countryflags.io/nc/shiny/64.png" class="left">New Caledonia</option>
+                            <option value="NZ" data-icon="https://www.countryflags.io/nz/shiny/64.png" class="left">New Zealand</option>
+                            <option value="NI" data-icon="https://www.countryflags.io/ni/shiny/64.png" class="left">Nicaragua</option>
+                            <option value="NE" data-icon="https://www.countryflags.io/ne/shiny/64.png" class="left">Niger</option>
+                            <option value="NG" data-icon="https://www.countryflags.io/ng/shiny/64.png" class="left">Nigeria</option>
+                            <option value="NU" data-icon="https://www.countryflags.io/nu/shiny/64.png" class="left">Niue</option>
+                            <option value="NF" data-icon="https://www.countryflags.io/nf/shiny/64.png" class="left">Norfolk Island</option>
+                            <option value="MP" data-icon="https://www.countryflags.io/mp/shiny/64.png" class="left">Northern Mariana Islands</option>
+                            <option value="NO" data-icon="https://www.countryflags.io/no/shiny/64.png" class="left">Norway</option>
+                            <option value="OM" data-icon="https://www.countryflags.io/om/shiny/64.png" class="left">Oman</option>
+                            <option value="PK" data-icon="https://www.countryflags.io/pk/shiny/64.png" class="left">Pakistan</option>
+                            <option value="PW" data-icon="https://www.countryflags.io/pw/shiny/64.png" class="left">Palau</option>
+                            <option value="PS" data-icon="https://www.countryflags.io/ps/shiny/64.png" class="left">Palestinian Territory, Occupied</option>
+                            <option value="PA" data-icon="https://www.countryflags.io/pa/shiny/64.png" class="left">Panama</option>
+                            <option value="PG" data-icon="https://www.countryflags.io/pg/shiny/64.png" class="left">Papua New Guinea</option>
+                            <option value="PY" data-icon="https://www.countryflags.io/py/shiny/64.png" class="left">Paraguay</option>
+                            <option value="PE" data-icon="https://www.countryflags.io/pe/shiny/64.png" class="left">Peru</option>
+                            <option value="PH" data-icon="https://www.countryflags.io/ph/shiny/64.png" class="left">Philippines</option>
+                            <option value="PN" data-icon="https://www.countryflags.io/pn/shiny/64.png" class="left">Pitcairn</option>
+                            <option value="PL" data-icon="https://www.countryflags.io/pl/shiny/64.png" class="left">Poland</option>
+                            <option value="PT" data-icon="https://www.countryflags.io/pt/shiny/64.png" class="left">Portugal</option>
+                            <option value="PR" data-icon="https://www.countryflags.io/pr/shiny/64.png" class="left">Puerto Rico</option>
+                            <option value="QA" data-icon="https://www.countryflags.io/qa/shiny/64.png" class="left">Qatar</option>
+                            <option value="RE" data-icon="https://www.countryflags.io/re/shiny/64.png" class="left">Réunion</option>
+                            <option value="RO" data-icon="https://www.countryflags.io/ro/shiny/64.png" class="left">Romania</option>
+                            <option value="RU" data-icon="https://www.countryflags.io/ru/shiny/64.png" class="left">Russian Federation</option>
+                            <option value="RW" data-icon="https://www.countryflags.io/rw/shiny/64.png" class="left">Rwanda</option>
+                            <option value="BL" data-icon="https://www.countryflags.io/bl/shiny/64.png" class="left">Saint Barthélemy</option>
+                            <option value="SH" data-icon="https://www.countryflags.io/sh/shiny/64.png" class="left">Saint Helena, Ascension and Tristan da Cunha</option>
+                            <option value="KN" data-icon="https://www.countryflags.io/kn/shiny/64.png" class="left">Saint Kitts and Nevis</option>
+                            <option value="LC" data-icon="https://www.countryflags.io/lc/shiny/64.png" class="left">Saint Lucia</option>
+                            <option value="MF" data-icon="https://www.countryflags.io/mf/shiny/64.png" class="left">Saint Martin (French part)</option>
+                            <option value="PM" data-icon="https://www.countryflags.io/pm/shiny/64.png" class="left">Saint Pierre and Miquelon</option>
+                            <option value="VC" data-icon="https://www.countryflags.io/vc/shiny/64.png" class="left">Saint Vincent and the Grenadines</option>
+                            <option value="WS" data-icon="https://www.countryflags.io/ws/shiny/64.png" class="left">Samoa</option>
+                            <option value="SM" data-icon="https://www.countryflags.io/sm/shiny/64.png" class="left">San Marino</option>
+                            <option value="ST" data-icon="https://www.countryflags.io/st/shiny/64.png" class="left">Sao Tome and Principe</option>
+                            <option value="SA" data-icon="https://www.countryflags.io/sa/shiny/64.png" class="left">Saudi Arabia</option>
+                            <option value="SN" data-icon="https://www.countryflags.io/sn/shiny/64.png" class="left">Senegal</option>
+                            <option value="RS" data-icon="https://www.countryflags.io/rs/shiny/64.png" class="left">Serbia</option>
+                            <option value="SC" data-icon="https://www.countryflags.io/sc/shiny/64.png" class="left">Seychelles</option>
+                            <option value="SL" data-icon="https://www.countryflags.io/sl/shiny/64.png" class="left">Sierra Leone</option>
+                            <option value="SG" data-icon="https://www.countryflags.io/sg/shiny/64.png" class="left">Singapore</option>
+                            <option value="SX" data-icon="https://www.countryflags.io/sx/shiny/64.png" class="left">Sint Maarten (Dutch part)</option>
+                            <option value="SK" data-icon="https://www.countryflags.io/sk/shiny/64.png" class="left">Slovakia</option>
+                            <option value="SI" data-icon="https://www.countryflags.io/si/shiny/64.png" class="left">Slovenia</option>
+                            <option value="SB" data-icon="https://www.countryflags.io/sb/shiny/64.png" class="left">Solomon Islands</option>
+                            <option value="SO" data-icon="https://www.countryflags.io/so/shiny/64.png" class="left">Somalia</option>
+                            <option value="ZA" data-icon="https://www.countryflags.io/za/shiny/64.png" class="left">South Africa</option>
+                            <option value="GS" data-icon="https://www.countryflags.io/gs/shiny/64.png" class="left">South Georgia and the South Sandwich Islands</option>
+                            <option value="SS" data-icon="https://www.countryflags.io/ss/shiny/64.png" class="left">South Sudan</option>
+                            <option value="ES" data-icon="https://www.countryflags.io/es/shiny/64.png" class="left">Spain</option>
+                            <option value="LK" data-icon="https://www.countryflags.io/lk/shiny/64.png" class="left">Sri Lanka</option>
+                            <option value="SD" data-icon="https://www.countryflags.io/sd/shiny/64.png" class="left">Sudan</option>
+                            <option value="SR" data-icon="https://www.countryflags.io/sr/shiny/64.png" class="left">Suriname</option>
+                            <option value="SJ" data-icon="https://www.countryflags.io/sj/shiny/64.png" class="left">Svalbard and Jan Mayen</option>
+                            <option value="SZ" data-icon="https://www.countryflags.io/sz/shiny/64.png" class="left">Swaziland</option>
+                            <option value="SE" data-icon="https://www.countryflags.io/se/shiny/64.png" class="left">Sweden</option>
+                            <option value="CH" data-icon="https://www.countryflags.io/ch/shiny/64.png" class="left">Switzerland</option>
+                            <option value="SY" data-icon="https://www.countryflags.io/sy/shiny/64.png" class="left">Syrian Arab Republic</option>
+                            <option value="TW" data-icon="https://www.countryflags.io/tw/shiny/64.png" class="left">Taiwan, Province of China</option>
+                            <option value="TJ" data-icon="https://www.countryflags.io/tj/shiny/64.png" class="left">Tajikistan</option>
+                            <option value="TZ" data-icon="https://www.countryflags.io/tz/shiny/64.png" class="left">Tanzania, United Republic of</option>
+                            <option value="TH" data-icon="https://www.countryflags.io/th/shiny/64.png" class="left">Thailand</option>
+                            <option value="TL" data-icon="https://www.countryflags.io/tl/shiny/64.png" class="left">Timor-Leste</option>
+                            <option value="TG" data-icon="https://www.countryflags.io/tg/shiny/64.png" class="left">Togo</option>
+                            <option value="TK" data-icon="https://www.countryflags.io/tk/shiny/64.png" class="left">Tokelau</option>
+                            <option value="TO" data-icon="https://www.countryflags.io/to/shiny/64.png" class="left">Tonga</option>
+                            <option value="TT" data-icon="https://www.countryflags.io/tt/shiny/64.png" class="left">Trinidad and Tobago</option>
+                            <option value="TN" data-icon="https://www.countryflags.io/tn/shiny/64.png" class="left">Tunisia</option>
+                            <option value="TR" data-icon="https://www.countryflags.io/tr/shiny/64.png" class="left">Turkey</option>
+                            <option value="TM" data-icon="https://www.countryflags.io/tm/shiny/64.png" class="left">Turkmenistan</option>
+                            <option value="TC" data-icon="https://www.countryflags.io/tc/shiny/64.png" class="left">Turks and Caicos Islands</option>
+                            <option value="TV" data-icon="https://www.countryflags.io/tv/shiny/64.png" class="left">Tuvalu</option>
+                            <option value="UG" data-icon="https://www.countryflags.io/ug/shiny/64.png" class="left">Uganda</option>
+                            <option value="UA" data-icon="https://www.countryflags.io/ua/shiny/64.png" class="left">Ukraine</option>
+                            <option value="AE" data-icon="https://www.countryflags.io/ae/shiny/64.png" class="left">United Arab Emirates</option>
+                            <option value="GB" data-icon="https://www.countryflags.io/gb/shiny/64.png" class="left">United Kingdom</option>
+                            <option value="US" data-icon="https://www.countryflags.io/us/shiny/64.png" class="left">United States</option>
+                            <option value="UM" data-icon="https://www.countryflags.io/um/shiny/64.png" class="left">United States Minor Outlying Islands</option>
+                            <option value="UY" data-icon="https://www.countryflags.io/uy/shiny/64.png" class="left">Uruguay</option>
+                            <option value="UZ" data-icon="https://www.countryflags.io/uz/shiny/64.png" class="left">Uzbekistan</option>
+                            <option value="VU" data-icon="https://www.countryflags.io/vu/shiny/64.png" class="left">Vanuatu</option>
+                            <option value="VE" data-icon="https://www.countryflags.io/ve/shiny/64.png" class="left">Venezuela, Bolivarian Republic of</option>
+                            <option value="VN" data-icon="https://www.countryflags.io/vn/shiny/64.png" class="left">Vietnam</option>
+                            <option value="VG" data-icon="https://www.countryflags.io/vg/shiny/64.png" class="left">Virgin Islands, British</option>
+                            <option value="VI" data-icon="https://www.countryflags.io/vi/shiny/64.png" class="left">Virgin Islands, U.S.</option>
+                            <option value="WF" data-icon="https://www.countryflags.io/wf/shiny/64.png" class="left">Wallis and Futuna</option>
+                            <option value="EH" data-icon="https://www.countryflags.io/eh/shiny/64.png" class="left">Western Sahara</option>
+                            <option value="YE" data-icon="https://www.countryflags.io/ye/shiny/64.png" class="left">Yemen</option>
+                            <option value="ZM" data-icon="https://www.countryflags.io/zm/shiny/64.png" class="left">Zambia</option>
+                            <option value="ZW" data-icon="https://www.countryflags.io/zw/shiny/64.png" class="left">Zimbabwe</option>
+                        </select>
+                        </form>                   
+
+                         <!--input-->
+
+                        <div class="row">
+                            <div class="input-field col s12 m6 l6 xl6">
+                            <span id="sym"></span><input type="text" name="currency-field" id="currency-field" pattern="^\$\d{1,3}(,\d{3})*(\.\d+)?$" value="" data-type="currency" placeholder="AMOUNT YOU WANT TO CONVERT">
+                            <label id ="segunda" for="currency-field"></label>                     
+                                              
+                            </div>
+                        </div>
+
+                   
+
+
+                        <!--Image-->
+
+                        <div class="row"> 
+                            <h5 class="center teal-text" >Currency Pair</h5>    
+                            <p id="bagsakan"></p>                                                        
+                            <p id="ikalawangbagsak"></p>
+
+                       
+                          
+                            <div class="card col s12 m12 l12 z-depth-0">
+                                <!-- Card Content -->                            
+                                <p id="Ans1"></p>
+                                <p id="Ans2"></p>
+                                <p id="Ans3"></p>
+                                <h3 id="Ans4"></h3>
+                                <br>
+                                </div>
+                           
+
+                            
+                        </div>
+
+                        <!--testing ng card  pang space -->
+
+                        <div class="row">
+                            <div class="col s12 m6 ">
+                            <div class="card z-depth-0">
+                                <div class="card-content">
+                                <br>  
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                                  
+                           
+                        
+                                                
+                               
+                                                
+                        
+                        
+                        
+                        
+                     
+
+
+
+                        <!-- Text 
+
+                       <div class="row">
+                           <div class="col s12 m12 l12">
+                                <div class="row black-text">                                                            
+                                     <p id="Ans1">Greetings</p>
+                                     <p id="Ans2">rrr</p>
+                                     <p id="Ans3">rrr</p>
+                                     <p id="Ans4">rrr</p>    
+                                     
+                                   
+                                 </div>                                   
+                            </div>                        
+                        </div>
+
+                       from fetch-->
+
+                        <!-- Text from Button-->
+
+                                 
+                           <div class="row" id="btn">
+                           <a class="waves-effect waves-light btn-large col s12 m6 l6" id="calculate" onclick="calc()"><i class="fa fa-calculator"></i>Calculate</a>
+                           <a class="waves-effect waves-light btn-large col s12 m6 l6" id="reset" onclick="reload()">Reset</a>
+                        </div>
+
+
+                    </div>  
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+   
+
+
+
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+            <script src="js/main.js"></script>
+            <script src="js/side.js"></script>
+            <script src="js/app.js"></script>           
+            <script src="js/calculate.js"></script>
+
+            
+            
+        </body>
+    </html>
