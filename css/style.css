@@ -34,8 +34,11 @@
 
    margin-top: 0;
    margin-bottom: 0;
+  
+  
    
 }
+
 
 
 #thb{
@@ -134,7 +137,7 @@ span{
    display: inline-block;
 }
 
-#Ans1, #Ans2, #Ans3 {
+#Ans0, #Ans1, #Ans2, #Ans3 {
   text-align: left;
   color: teal;
   font-size: 18px;
@@ -226,6 +229,8 @@ input[type=number]::-webkit-outer-spin-button {
    
    
 }
+
+
 
 
 @media (max-width: 600px) {

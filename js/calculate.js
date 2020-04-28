@@ -41,6 +41,7 @@ function calc(){
             var ka = JSON.stringify(data);
             var datung = JSON.parse(ka);
             var datung1 = datung.query.count;
+            var datung2 = datung.status;
 
             if(datung1 == 0){
                Ans1.innerHTML= "Sorry but we cannot determine thevalue of this currency pair.";
@@ -51,6 +52,10 @@ function calc(){
 
 
             } // end ng if
+            else if(datung2 == 400){
+               alert("Sorry but We are having some issues connecting to the IP address that you are using\nPlease Try Again later...");
+
+            }
             else{
               
             fetch('https://free.currconv.com/api/v7/convert?apiKey=7803ea082ced7918c5e2&q=' + dump1 + "_" + dump6)          
@@ -88,24 +93,36 @@ function calc(){
                var Ans3 = document.getElementById("Ans3");
                var Ans4 = document.getElementById("Ans4");
 
-               Ans1.innerHTML = ("Greetings,");
-               Ans2.innerHTML = ("As of " + orasan + "&nbsp&nbsp" + "the current value of " +"&nbsp" + dump3 + "&nbsp"+ "1"  + "&nbsp" +dump1 + "&nbsp" + " is "+ "&nbsp" + dump4 + pampalit + "." );
-               Ans3.innerHTML = ("Therefore " + dump3 +  amount + "&nbsp" + dump1 +"&nbsp" + "multiply by" + "&nbsp" + dump4 + pampalit + "&nbsp" + "is equivalent to: " ); 
+
+               // kulay 
+
+               var pinta = dump3.fontcolor("#E53935");
+               var pintb = dump1.fontcolor("#E53935");
+               var pintc = dump4.fontcolor("#1B5E20");
+               var pintd = limbag.fontcolor("#1B5E20");
+               var pinte = dump6.fontcolor("#1B5E20");
+               var pintf = amount.fontcolor("#EF5350");
+
+               
+
+               // modified kasagutan 
+
+
+               var mesa = ("As of " + orasan + "&nbsp" + "your base currency which is " + dump2 + "&nbsp" + "or" + "&nbsp" + pinta + "&nbsp" + "(" + "&nbsp" + pintb + "&nbsp" + "),"); // Una 
+               var mesb =("has a " + dump5 + "&nbsp" + "value amounting to " + pintc + "&nbsp" + pintd + "&nbsp" + "(" + "&nbsp" + pinte + "&nbsp" + ")." ); 
+             
+               
+
+               // Output mader pakers
+               Ans0.innerHTML = ("Greetings,"); 
+               Ans1.innerHTML = (mesa);
+               Ans2.innerHTML = (mesb);
+               Ans3.innerHTML = ("Therefore " + pinta + "&nbsp" +  pintf + "&nbsp" + pintb +"&nbsp" + "is equivalent to: " ); 
                Ans4.innerHTML = (dump4 + "&nbsp" + pinakatama);  
 
                document.getElementById("calculate").setAttribute("disabled","disabled");             
                document.getElementById("currency-field").setAttribute("disabled","disabled");    
               
-
-
-
-               //console.log(orasan);
-
-
-
-
-
-
               
 
 
@@ -116,26 +133,7 @@ function calc(){
       )};
 
 
-
-
-
-
-
-        // this shit is working 
-        //var konvert = new Intl.NumberFormat('en');
-
-       // var qq = amount.replace(/[.,\s]/g, ''); // remove dots ito
-       // var qqq = parseFloat(qq);
-
-        //var sum =(qqq + 50);
-
-       // confirm(dump4 + " " + sum);
-
-       
-
       }
-
-
 
       )};
 

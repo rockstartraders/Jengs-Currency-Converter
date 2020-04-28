@@ -10,6 +10,8 @@
         <link rel="stylesheet" href="css/style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+       
+     
         <title>Jengs Currency Converter</title>
     </head>
     <body onload="onlowd();">
@@ -672,10 +674,14 @@
                             <option value="ZM" data-icon="https://www.countryflags.io/zm/shiny/64.png" class="left">Zambia</option>
                             <option value="ZW" data-icon="https://www.countryflags.io/zw/shiny/64.png" class="left">Zimbabwe</option>
                         </select>
-                       </form>
+                       </form>  
+
+
+
+
                        <form class="col s12 m6 l6 xl6">
                         <label class="left">TO</label>
-                        <select class="icons" id="to" onchange="dalawa();">
+                        <select id="to" onchange="dalawa();">
                             <option value="" disabled selected>Select Country</option>
                             <option value="AF" data-icon="https://www.countryflags.io/af/shiny/64.png" class="left">Afghanistan</option>
                             <option value="AX" data-icon="https://www.countryflags.io/ax/shiny/64.png" class="left">Åland Islands</option>
@@ -927,8 +933,10 @@
                             <option value="ZM" data-icon="https://www.countryflags.io/zm/shiny/64.png" class="left">Zambia</option>
                             <option value="ZW" data-icon="https://www.countryflags.io/zw/shiny/64.png" class="left">Zimbabwe</option>
                         </select>
-                        </form>                   
+                        </form>     
+                     
 
+                    
                          <!--input-->
 
                         <div class="row">
@@ -945,14 +953,17 @@
                         <!--Image-->
 
                         <div class="row"> 
-                            <h5 class="center teal-text" >Currency Pair</h5>    
+                            <h5 class="center teal-text" >CURRENCY PAIR</h5>    
+                            <center>
                             <p id="bagsakan"></p>                                                        
                             <p id="ikalawangbagsak"></p>
+                            </center>
 
                        
                           
                             <div class="card col s12 m12 l12 z-depth-0">
-                                <!-- Card Content -->                            
+                                <!-- Card Content -->  
+                                <p id="Ans0"></p>                          
                                 <p id="Ans1"></p>
                                 <p id="Ans2"></p>
                                 <p id="Ans3"></p>
@@ -1034,7 +1045,7 @@
             <script src="js/app.js"></script>           
             <script src="js/calculate.js"></script>
 
-            
-            
+
+           
         </body>
     </html>
