@@ -15,7 +15,8 @@ function calc(){
         var dump6 = document.getElementById("dump6").textContent; // 3 letter code ng pera ng TO
 
         var amount = document.getElementById("currency-field").value; // amount na input ng mga mokong
-      
+        var note = document.getElementById("note"); 
+
         // answer field
 
         var Ans1 = document.getElementById("Ans1");
@@ -45,17 +46,13 @@ function calc(){
 
             if(datung1 == 0){
                Ans1.innerHTML= "Sorry but we cannot determine thevalue of this currency pair.";
-               Ans2.innerHTML= "Please try a different currency or try again by hitting the reset button";
+               Ans2.innerHTML= "Please try again by hitting the reset button";
                document.getElementById("calculate").setAttribute("disabled","disabled");             
                document.getElementById("currency-field").setAttribute("disabled","disabled");    
 
 
 
-            } // end ng if
-            else if(datung2 == 400){
-               alert("Sorry but We are having some issues connecting to the IP address that you are using\nPlease Try Again later...");
-
-            }
+            } // end ng if            
             else{
               
             fetch('https://free.currconv.com/api/v7/convert?apiKey=7803ea082ced7918c5e2&q=' + dump1 + "_" + dump6)          
@@ -69,6 +66,7 @@ function calc(){
                
 
                // conversion stage 
+               
                var pamalit = kb.results[combi].val;  // ito yung result na value from json
                var pampalit = pamalit.toFixed(2); // bawas digit
                var limbag = pampalit.toString();  // ito yung result na value from json na string na
@@ -102,23 +100,29 @@ function calc(){
                var pintd = limbag.fontcolor("#1B5E20");
                var pinte = dump6.fontcolor("#1B5E20");
                var pintf = amount.fontcolor("#EF5350");
+               var babala = ("Note: ").fontcolor("#b71c1c");
+
+               var l = dump2.toUpperCase();
+               var la = dump5.toUpperCase();
+
 
                
 
                // modified kasagutan 
 
 
-               var mesa = ("As of " + orasan + "&nbsp" + "your base currency which is " + dump2 + "&nbsp" + "or" + "&nbsp" + pinta + "&nbsp" + "(" + "&nbsp" + pintb + "&nbsp" + "),"); // Una 
-               var mesb =("has a " + dump5 + "&nbsp" + "value amounting to " + pintc + "&nbsp" + pintd + "&nbsp" + "(" + "&nbsp" + pinte + "&nbsp" + ")." ); 
-             
+               var mesa = ("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "As of " + orasan.italics() + "&nbsp&nbsp" + "your base currency which is " + l + "&nbsp" + "or" + "&nbsp" + pinta + "&nbsp" + "(" + pintb  + ")" + "&nbsp"); // Una 
+               var mesb =("has a value amounting to " + pintc + "&nbsp" + pintd + "&nbsp" + "(" + pinte + ")" + "&nbsp" + "in" + "&nbsp" + la + "."); 
+               var mesc = (babala + "The API used for this program is accurate but amount may still vary depending on service charges and taxes if there's any.")  
                
 
                // Output mader pakers
                Ans0.innerHTML = ("Greetings,"); 
-               Ans1.innerHTML = (mesa);
-               Ans2.innerHTML = (mesb);
+               Ans1.innerHTML = (mesa + mesb);
+               //Ans2.innerHTML = (mesb);
                Ans3.innerHTML = ("Therefore " + pinta + "&nbsp" +  pintf + "&nbsp" + pintb +"&nbsp" + "is equivalent to: " ); 
-               Ans4.innerHTML = (dump4 + "&nbsp" + pinakatama);  
+               Ans4.innerHTML = (dump4 + "&nbsp" + (pinakatama + ".00") + "<br />" + "<br />" );  
+               note.innerHTML = mesc;
 
                document.getElementById("calculate").setAttribute("disabled","disabled");             
                document.getElementById("currency-field").setAttribute("disabled","disabled");    

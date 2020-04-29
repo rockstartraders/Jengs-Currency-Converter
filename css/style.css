@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@700&display=swap');
+
 
 * {
     margin: 0;
@@ -32,7 +34,7 @@
 
 .card{
 
-   margin-top: 0;
+   margin-top: -25px;
    margin-bottom: 0;
   
   
@@ -64,7 +66,12 @@
 
 
 .nav{
-    display: none;
+    display: none;   
+}
+
+.material-icons{
+    color: white;
+    margin-left: 5px;
 }
 
 
@@ -143,11 +150,14 @@ span{
   font-size: 18px;
   margin-top: 1px;
   height: 100%;
+  font-family: 'Sen', sans-serif;
   
 }
 
 #Ans4{
     color: #336633;
+    font-weight: bold;
+    
 }
 
 .material-icons{
@@ -230,8 +240,14 @@ input[type=number]::-webkit-outer-spin-button {
    
 }
 
-
-
+#cp{
+    font-weight: 900;
+}
+#note{
+    font-size: 13px;
+    text-align: left;
+    margin-left: 5px;
+}
 
 @media (max-width: 600px) {
 
@@ -289,6 +305,16 @@ input[type=number]::-webkit-outer-spin-button {
     
     }
 
+    #Ans0, #Ans1, #Ans2, #Ans3, #Ans4 {
+        text-align: left;
+        color: teal;
+        
+    }
+    #Ans4{
+        text-align: center;
+    }
+      
+   
  
 
     
