@@ -112,7 +112,7 @@ function calc(){
 
 
                var mesa = ("&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp" + "As of " + orasan.italics() + "&nbsp&nbsp" + "your base currency which is " + l + "&nbsp" + "or" + "&nbsp" + pinta + "&nbsp" + "(" + pintb  + ")" + "&nbsp"); // Una 
-               var mesb =("has a value amounting to " + pintc + "&nbsp" + pintd + "&nbsp" + "(" + pinte + ")" + "&nbsp" + "in" + "&nbsp" + la + "."); 
+               var mesb =("has a value amounting to " + pintc + "&nbsp" + pintd + "&nbsp" + "in" + "&nbsp" + la + "&nbsp" +"(" + pinte + ")"  + "."); 
                var mesc = (babala + "The API used for this program is accurate but amount may still vary depending on service charges and taxes if there's any.")  
                
 
