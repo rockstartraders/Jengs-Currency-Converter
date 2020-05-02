@@ -34,12 +34,13 @@
 
 .card{
 
-   margin-top: -25px;
+   margin-top: 0;
    margin-bottom: 0;
   
   
    
 }
+
 
 
 
@@ -52,12 +53,14 @@
     text-align: center;
     display: block;
     margin: 0em;
-    color: white;
+    color: #fafafa;
+    
 }
 
 #ako{
    margin-top: 15x;
    display: inline-block;
+   color: #ffc40d;
 }
 
 
@@ -90,6 +93,7 @@ body{
 
 .ibabaw{
     background-color: #009999;
+    text-transform: uppercase;
 }
 
 .row:last-child {
@@ -147,7 +151,8 @@ span{
 #Ans0, #Ans1, #Ans2, #Ans3 {
   text-align: left;
   color: teal;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: calc(16px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
   margin-top: 1px;
   height: 100%;
   font-family: 'Sen', sans-serif;
@@ -267,8 +272,8 @@ input[type=number]::-webkit-outer-spin-button {
 
     .container{
         
-        width: 100%;
-        height: 100% !important;
+        width: 100vw;
+        height: 100vh !important;
     }
 
  
@@ -276,15 +281,20 @@ input[type=number]::-webkit-outer-spin-button {
         margin-top: 0!important;
         padding-bottom: 0!important;
         margin-bottom: 0;
-       
+    
     }
+
+
   
 
     .ibabaw{
+        font-size: calc(26px + (30 - 14) * ((100vw - 300px) / (1600 - 300)));   
         padding-top: 25px;
+        padding: 30px;
         text-align: center;
         align-content: center;
         text-transform: uppercase;
+        font-weight: 800;
 
     }
 
@@ -305,17 +315,29 @@ input[type=number]::-webkit-outer-spin-button {
     
     }
 
-    #Ans0, #Ans1, #Ans2, #Ans3, #Ans4 {
+    #Ans0, #Ans1, #Ans2, #Ans3{
         text-align: left;
         color: teal;
+        font-size: calc(16px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
         
     }
     #Ans4{
+        padding-top: 18px;
         text-align: center;
+        font-size: calc(25px + (28 - 14) * ((100vw - 300px) / (1600 - 300)));       
+        color: #336633;
+        font-weight: bold;
     }
       
-   
- 
+    .fa-github{
+        margin-top: 15px;
+        margin-bottom: 18px;
+        color: #fafafa;
+
+        
+    }
+
+
 
     
     }
