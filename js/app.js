@@ -47,6 +47,10 @@ function una(){
         aa.innerHTML = (aaa); // print statement  // bbb + '&nbsp&nbsp/&nbsp' + nakalagay brfore
         dump2.innerHTML = bbb; //ngalan ng pera
         dump3.innerHTML = aaa; //simbolo ng pera
+
+
+        // focus next box 
+        document.getElementById('to').autofocus;
    
         
         
