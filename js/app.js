@@ -49,10 +49,6 @@ function una(){
         dump3.innerHTML = aaa; //simbolo ng pera
 
 
-        // focus next box 
-        document.getElementById('to').autofocus;
-   
-        
         
 
 
