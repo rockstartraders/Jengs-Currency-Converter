@@ -106,9 +106,22 @@ function dalawa(){
         dump5.innerHTML = ac; //ngalan ng pera
         dump6.innerHTML = ad; //3 letter code ng pera
 
+        document.getElementById("currency-field").focus();
+
        });    
 
 
     } 
   }
    
+// key down sa enter
+document.getElementById("currency-field")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("calculate").click();
+    }
+});
+
+
+  
